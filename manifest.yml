@@ -1,0 +1,15 @@
+---
+declared-services:
+  Conversation-TestCases:
+    label: conversation
+    plan: free
+applications:
+- name: chitchatdemo
+  command: npm start
+  path: .
+  memory: 256M
+  instances: 1
+  services:
+  - Conversation-TestCases
+  env:
+    NPM_CONFIG_PRODUCTION: false
